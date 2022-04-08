@@ -1,0 +1,396 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.inicio {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+div.imagem{
+    background-image: url(./images/c6f343116012399.6059c4688e3da.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 50vw;
+    height: calc(100vh - 8px);
+    border: 4px solid #F1F2D5;
+}
+
+div.formulario{
+    background-color: #F1F2D5;
+    width: 50vw;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+}
+
+div.conteudo{
+    display:inline-block;
+    vertical-align: bottom;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+h1.titulo{
+    font-weight: 400;
+    color: #011F26;
+    font-size: 20px;
+}
+
+div.user-password{
+    display: flex;
+    margin-top: 50px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+.user{
+    background-color: #F1F2D5;
+    height: 40px;
+    width: 20vw;
+    border: 1px solid rgba(165, 165, 145, 1);
+    color: rgba(165, 165, 145, 1);
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+}
+
+.password{
+    background-color: #F1F2D5;
+    height: 40px;
+    width: 20vw;
+    border: 1px solid rgba(165, 165, 145, 1);
+    color: rgba(165, 165, 145, 1);
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+button.entrar {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: calc(42vw + 6px);
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   
+button.entrar .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #011F26;
+    border-radius: 1.625rem;
+   }
+   
+button.entrar .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #F1F2D5;
+   }
+   
+button.entrar .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+button.entrar .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #F1F2D5;
+    border-right: 0.125rem solid #F1F2D5;
+    transform: rotate(45deg);
+   }
+   
+button.entrar .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 39%;
+    margin: 0 0 0 1.85rem;
+    color: #011F26;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+   }
+   
+button.entrar:hover .circle {
+    width: 100%;
+   }
+   
+button.entrar:hover .circle .icon.arrow {
+    background: #F1F2D5;
+    transform: translate(1rem, 0);
+   }
+   
+button.entrar:hover .button-text {
+    color: #F1F2D5;
+   }
+
+a.conta {
+    text-decoration: none;
+    color: #011F26;
+    position: relative;
+}
+
+a.conta::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(242, 166, 26, 1);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+a.conta:hover::after{
+    transform: scaleX(1);
+}
+
+button.criar-conta {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: calc(42vw + 6px);
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   
+button.criar-conta .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #011F26;
+    border-radius: 1.625rem;
+   }
+   
+button.criar-conta .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #F1F2D5;
+   }
+   
+button.criar-conta .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+button.criar-conta .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #F1F2D5;
+    border-right: 0.125rem solid #F1F2D5;
+    transform: rotate(45deg);
+   }
+   
+button.criar-conta .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 30%;
+    margin: 0 0 0 1.85rem;
+    color: #011F26;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+   }
+   
+button.criar-conta:hover .circle {
+    width: 100%;
+   }
+   
+button.criar-conta:hover .circle .icon.arrow {
+    background: #F1F2D5;
+    transform: translate(1rem, 0);
+   }
+   
+button.criar-conta:hover .button-text {
+    color: #F1F2D5;
+   }
+
+div.forms{
+    display: block;
+    text-align: left;
+    margin-left: calc(4vw - 3px);
+    margin-top: 50px;
+}
+
+.user-pass{
+    background-color: #F1F2D5;
+    height: 40px;
+    width: 25vw;
+    border: 1px solid rgba(165, 165, 145, 1);
+    color: rgba(165, 165, 145, 1);
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-radius: 21px;
+    margin-top: 15px;
+}
+
+body.inicio-2 {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #F1F2D5;
+}
+
+h1.titulo-2{
+    font-weight: 700;
+    color: #011F26;
+    font-size: 25px;
+    margin: 0;
+    padding-left: 1.5vw;
+    padding-top: 3vh;
+}
+
+div.criar-recado{
+    display: flex;
+    width: 97vw;
+    margin-left: 1.5vw;
+    margin-right: 0;
+    margin-top: 10px;
+}
+
+input.descricao{
+    background-color: #F1F2D5;
+    height: 40px;
+    width: 25vw;
+    border: 1px solid rgba(165, 165, 145, 1);
+    color: rgba(165, 165, 145, 1);
+    padding-left: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-radius: 21px;
+}
+
+div.descricao{
+    padding-right: 2.5vw;
+    width: 27vw;
+}
+
+input.detalhamento{
+    background-color: #F1F2D5;
+    height: 40px;
+    width: 57vw;
+    border: 1px solid rgba(165, 165, 145, 1);
+    color: rgba(165, 165, 145, 1);
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+}
+
+input.salvar{
+    background-color: #025E73;
+    height: 44px;
+    width: 10vw;
+    border: none;
+    color: #F1F2D5;
+    padding-left: 10px;
+    margin-left: -1vw;
+    margin-right: -3vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+    cursor: pointer;
+}
+
+table.recados{
+    border-collapse: collapse;
+    width: 97vw;
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    height: 79vh;
+}
+
+th{
+    border-top: 1px solid rgba(165, 165, 145, 1);
+    border-bottom: 1px solid rgba(165, 165, 145, 1);
+    text-align: left;
+}
+
+tr{
+    height: calc(79vh / 18);
+}
+
+.coluna1{
+    width: 7vw;
+}
+
+.coluna2{
+    width: 35vw;
+}
+
+.coluna3{
+    width: 35vw;
+}
+
+.coluna4{
+    width: 20vw;
+}
