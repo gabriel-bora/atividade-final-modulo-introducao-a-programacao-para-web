@@ -394,3 +394,7 @@ tr{
 .coluna4{
     width: 20vw;
 }
+
+input:focus{
+    outline-color: rgba(242, 166, 26, 1);
+}
