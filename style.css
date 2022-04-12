@@ -10,15 +10,15 @@ body.inicio {
 }
 
 div.imagem{
-    background-image: url(./images/c6f343116012399.6059c4688e3da.jpg);
-    background-position: center;
+    background-image: url(./images/b8f8b7128481505.6156e2ab5c122.jpg);
+    background-position: top;
     background-size: cover;
     width: 50vw;
     height: 100vh;
 }
 
 div.formulario{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     width: 50vw;
     height: 100vh;
     text-align: center;
@@ -34,7 +34,7 @@ div.conteudo{
 
 h1.titulo{
     font-weight: 400;
-    color: #011F26;
+    color: #260101;
     font-size: 20px;
 }
 
@@ -46,7 +46,7 @@ div.user-password{
 }
 
 .user{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
@@ -59,7 +59,7 @@ div.user-password{
 }
 
 .password{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
@@ -96,7 +96,7 @@ button.entrar .circle {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #011F26;
+    background: #260101;
     border-radius: 1.625rem;
    }
    
@@ -106,7 +106,7 @@ button.entrar .circle .icon {
     top: 0;
     bottom: 0;
     margin: auto;
-    background: #F1F2D5;
+    background: #F2F2F2;
    }
    
 button.entrar .circle .icon.arrow {
@@ -124,8 +124,8 @@ button.entrar .circle .icon.arrow::before {
     right: 0.0625rem;
     width: 0.625rem;
     height: 0.625rem;
-    border-top: 0.125rem solid #F1F2D5;
-    border-right: 0.125rem solid #F1F2D5;
+    border-top: 0.125rem solid #F2F2F2;
+    border-right: 0.125rem solid #F2F2F2;
     transform: rotate(45deg);
    }
    
@@ -138,7 +138,7 @@ button.entrar .button-text {
     bottom: 0;
     padding: 0.75rem 39%;
     margin: 0 0 0 1.85rem;
-    color: #011F26;
+    color: #260101;
     font-weight: 700;
     line-height: 1.6;
     text-align: left;
@@ -150,17 +150,17 @@ button.entrar:hover .circle {
    }
    
 button.entrar:hover .circle .icon.arrow {
-    background: #F1F2D5;
+    background: #F2F2F2;
     transform: translate(1rem, 0);
    }
    
 button.entrar:hover .button-text {
-    color: #F1F2D5;
+    color: #F2F2F2;
    }
 
 a.conta {
     text-decoration: none;
-    color: #011F26;
+    color: #260101;
     position: relative;
 }
 
@@ -168,7 +168,7 @@ a.conta::after{
     content: " ";
     width: 100%;
     height: 2px;
-    background-color: rgba(242, 166, 26, 1);
+    background-color: #A66832;
     border-radius: 4px;
     position: absolute;
     left: 0;
@@ -207,7 +207,7 @@ button.criar-conta .circle {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #011F26;
+    background: #260101;
     border-radius: 1.625rem;
    }
    
@@ -217,7 +217,7 @@ button.criar-conta .circle .icon {
     top: 0;
     bottom: 0;
     margin: auto;
-    background: #F1F2D5;
+    background: #F2F2F2;
    }
    
 button.criar-conta .circle .icon.arrow {
@@ -235,8 +235,8 @@ button.criar-conta .circle .icon.arrow::before {
     right: 0.0625rem;
     width: 0.625rem;
     height: 0.625rem;
-    border-top: 0.125rem solid #F1F2D5;
-    border-right: 0.125rem solid #F1F2D5;
+    border-top: 0.125rem solid #F2F2F2;
+    border-right: 0.125rem solid #F2F2F2;
     transform: rotate(45deg);
    }
    
@@ -249,7 +249,7 @@ button.criar-conta .button-text {
     bottom: 0;
     padding: 0.75rem 30%;
     margin: 0 0 0 1.85rem;
-    color: #011F26;
+    color: #260101;
     font-weight: 700;
     line-height: 1.6;
     text-align: left;
@@ -261,12 +261,12 @@ button.criar-conta:hover .circle {
    }
    
 button.criar-conta:hover .circle .icon.arrow {
-    background: #F1F2D5;
+    background: #F2F2F2;
     transform: translate(1rem, 0);
    }
    
 button.criar-conta:hover .button-text {
-    color: #F1F2D5;
+    color: #F2F2F2;
    }
 
 div.forms{
@@ -277,7 +277,7 @@ div.forms{
 }
 
 .user-pass{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     height: 40px;
     width: 25vw;
     border: 1px solid rgba(165, 165, 145, 1);
@@ -293,12 +293,12 @@ body.inicio-2 {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
 }
 
 h1.titulo-2{
     font-weight: 700;
-    color: #011F26;
+    color: #260101;
     font-size: 25px;
     margin: 0;
     padding-left: 1.5vw;
@@ -314,7 +314,7 @@ div.criar-recado{
 }
 
 input.descricao{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     height: 40px;
     width: 25vw;
     border: 1px solid rgba(165, 165, 145, 1);
@@ -331,7 +331,7 @@ div.descricao{
 }
 
 input.detalhamento{
-    background-color: #F1F2D5;
+    background-color: #F2F2F2;
     height: 40px;
     width: 57vw;
     border: 1px solid rgba(165, 165, 145, 1);
@@ -344,16 +344,16 @@ input.detalhamento{
 }
 
 input.salvar{
-    background-color: #025E73;
+    background-color: #8C3E3E;
     height: 44px;
     width: 10vw;
     border: none;
-    color: #F1F2D5;
+    color: rgb(31, 31, 31);
     padding-left: 10px;
     margin-left: -1vw;
     margin-right: -3vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     border-top-right-radius: 21px;
     border-bottom-right-radius: 21px;
     cursor: pointer;
@@ -366,12 +366,14 @@ table.recados{
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     height: 79vh;
+    color: rgb(31, 31, 31);
 }
 
 th{
     border-top: 1px solid rgba(165, 165, 145, 1);
     border-bottom: 1px solid rgba(165, 165, 145, 1);
     text-align: left;
+    color: #260101;
 }
 
 tr{
@@ -392,12 +394,40 @@ tr{
 
 .coluna4{
     width: 20vw;
+    display: flexbox;
 }
 
 input:focus{
-    border: 1px solid rgba(242, 166, 26, 1);
-        -webkit-box-shadow: 0px 0px 5px rgba(242, 166, 26, 0.75);
-        -moz-box-shadow: 0px 0px 5px rgba(242, 166, 26, 0.75);
-        box-shadow: 0px 0px 5px rgba(242, 166, 26, 0.75);
+    border: 1px solid #A66832;
+        -webkit-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
+        -moz-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
+        box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
     outline-style: none;
+}
+
+input.apagar{
+    background-color: #591616;
+    height: 26px;
+    width: 5vw;
+    border: none;
+    color: #F2F2F2;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+input.editar{
+    background-color: #A66832;
+    height: 26px;
+    width: 5vw;
+    border: none;
+    color: #F2F2F2;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-left: 5px;
 }
