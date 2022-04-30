@@ -45,7 +45,7 @@ div.user-password{
     margin-left: 3vw;
 }
 
-.user{
+#user{
     background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
@@ -58,7 +58,7 @@ div.user-password{
     border-bottom-left-radius: 21px;
 }
 
-.password{
+#password{
     background-color: #F2F2F2;
     height: 40px;
     width: 20vw;

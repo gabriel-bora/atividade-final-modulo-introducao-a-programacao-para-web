@@ -20,29 +20,32 @@
     <div class="formulario">
       <div class="conteudo">
         <h1 class="titulo">ENTRAR NO SISTEMA DE RECADOS</h1>
-        <div class="user-password">
-          <input
-            class="user"
-            type="text"
-            name="User Name"
-            placeholder="User Name"
-          />
-          <input
-            class="password"
-            type="password"
-            name="Password"
-            placeholder="Password"
-          />
-        </div>
-        <button class="entrar">
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Entrar</span>
-        </button>
+        <form action="./meus-recados.html" method="get" id="entrar">
+          <div class="user-password">
+            <input
+              id="user"
+              type="text"
+              name="User Name"
+              placeholder="User Name"
+            />
+            <input
+              id="password"
+              type="password"
+              name="Password"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="entrar">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Entrar</span>
+          </button>
+        </form>
         <br />
         <a class="conta" href="./cadastro.html">CRIAR CONTA</a>
       </div>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>
