@@ -19,26 +19,34 @@
     <div class="formulario">
       <div class="conteudo">
         <h1 class="titulo">CRIAR CONTA</h1>
-        <form action="">
+        <form action="" id="formCadastro">
           <div class="forms">
+            <label for="userEmail" id="label-userEmail">E-mail:</label>
+            <br>
             <input
               class="user-pass"
-              type="text"
+              type="email"
               name="User Name"
-              placeholder="User Name"
-            />
+              placeholder="E-mail"
+              id="userEmail"/>
+            <br><br>
+            <label for="userSenha" id="label-userSenha">Senha:</label>
+            <br>
             <input
               class="user-pass"
               type="password"
               name="User Name"
               placeholder="Password"
-            />
+              id="userSenha"/>
+            <br><br>
+            <label for="userRepeteSenha" id="label-userRepeteSenha">Repetir Senha:</label>
+            <br>
             <input
               class="user-pass"
               type="password"
               name="User Name"
               placeholder="Repeat Password"
-            />
+              id="userRepeteSenha"/>
           </div>
           <button class="criar-conta">
             <span class="circle" aria-hidden="true">
