@@ -54,7 +54,8 @@ function verificaSenha(){
             labelSenha.innerHTML = "Senha: *A senha precisa ter mais de 8 caracteres"
             validSenha = false;
         }else if(senhaValida === null){
-            labelSenha.innerHTML = 'Senha: *Deve conter: minúscula, maiúscula, número e caracter especial'; 
+            labelSenha.setAttribute("style", "color: red");
+            labelSenha.innerHTML = 'Senha: <span style="font-size: 12px">*Deve conter: minúscula, maiúscula, número e caracter especial</span>'; 
             validSenha = false;
         }else{
             labelSenha.setAttribute("style", "color: green");
@@ -94,15 +95,20 @@ function verificaCampos(){
     }else {
         let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));
         
-        for (const elemento of listaUsuarios) {
-            if(campoEmail.value == elemento.username){
-                alert('E-mail já tinha sido cadastrado. Redirecionando para a página de login.');
-                window.location = "./index.html";
-                return;
-            }else{
-                alert('Conta criada com sucesso!');
-                criaUsuario();
+        if(listaUsuarios){
+            for (const elemento of listaUsuarios) {
+                if(campoEmail.value == elemento.username){
+                    alert('E-mail já tinha sido cadastrado. Redirecionando para a página de login.');
+                    window.location = "./index.html";
+                    return;
+                }else{
+                    alert('Conta criada com sucesso!');
+                    criaUsuario();
+                }
             }
+        }else{
+            alert('Conta criada com sucesso!');
+            criaUsuario();
         }
     }
 }

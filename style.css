@@ -50,10 +50,10 @@ div.user-password{
     height: 40px;
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
-    color: rgba(165, 165, 145, 1);
+    color: rgb(0, 0, 0);
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 21px;
 }
@@ -63,10 +63,10 @@ div.user-password{
     height: 40px;
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
-    color: rgba(165, 165, 145, 1);
+    color: rgb(0, 0, 0);
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-top-right-radius: 21px;
     border-bottom-right-radius: 21px;
 }
@@ -281,10 +281,10 @@ div.forms{
     height: 40px;
     width: 25vw;
     border: 1px solid rgba(165, 165, 145, 1);
-    color: rgba(165, 165, 145, 1);
+    color: rgb(0, 0, 0);
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-radius: 21px;
     margin-top: 5px;
 }
@@ -318,10 +318,10 @@ input.descricao{
     height: 40px;
     width: 25vw;
     border: 1px solid rgba(165, 165, 145, 1);
-    color: rgba(165, 165, 145, 1);
+    color: rgb(0, 0, 0);
     padding-left: 1vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-radius: 21px;
 }
 
@@ -335,10 +335,10 @@ input.detalhamento{
     height: 40px;
     width: 57vw;
     border: 1px solid rgba(165, 165, 145, 1);
-    color: rgba(165, 165, 145, 1);
+    color: rgb(0, 0, 0);
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 21px;
 }
