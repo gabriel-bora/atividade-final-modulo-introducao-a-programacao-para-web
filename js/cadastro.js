@@ -17,7 +17,6 @@ campoSenha.addEventListener('keyup', verificaSenha);
 campoConfirmaSenha.addEventListener('keyup', verificaConfirmaSenha);
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-
     verificaCampos();
 });
 

@@ -1,3 +1,9 @@
+let login = window.sessionStorage.getItem('login');
+
+if(login){
+    window.location = "./meus-recados.html";
+}
+
 const form = document.getElementById('entrar');
 
 const user = document.getElementById('user');
@@ -20,6 +26,8 @@ form.addEventListener('submit', (event) => {
     }
 
     if(validacao === true){
+        window.sessionStorage.setItem('login', true);
+        window.sessionStorage.setItem('usuario', username);
         window.location = "./meus-recados.html";
         return;
     }else {
