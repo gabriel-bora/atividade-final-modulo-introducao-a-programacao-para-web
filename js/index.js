@@ -17,20 +17,16 @@ form.addEventListener('submit', (event) => {
     let username = user.value;
     let senha = password.value;
 
-    let validacao = false;
-
     if (!listaUsuarios){
         alert('Você não está cadastrado. Redirecionando para página de cadastro.');
         window.location = "./cadastro.html";
         return;
     }else{
-        for (const elemento of listaUsuarios) {
-            if ((username == elemento.username) && (senha == elemento.password)) {
-                validacao = true;
-            }
-        }
+        let validacao = listaUsuarios.some((valor) => {
+            return valor.username === username && valor.password === senha
+        });
     
-        if(validacao === true){
+        if(validacao){
             window.sessionStorage.setItem('login', true);
             window.sessionStorage.setItem('usuario', username);
             window.location = "./meus-recados.html";

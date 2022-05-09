@@ -83,31 +83,46 @@ function verificaConfirmaSenha(){
 }
 
 function verificaCampos(){
-        if(campoEmail.value === '' || campoSenha.value === ''  || campoConfirmaSenha.value === ''){
+    if(campoEmail.value === '' || campoSenha.value === ''  || campoConfirmaSenha.value === ''){
         alert('Algo deu errado! Por favor verifique se você preencheu todos os campos.');
         return;
-       
     }else if(!validEmail || !validSenha || !validConfirmaSenha){
         alert('Campos incorretos! Por favor verifique se você preencheu todos os campos corretamente.');
         return;
-        
     }else {
         let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));
         
         if(listaUsuarios){
-            for (const elemento of listaUsuarios) {
-                if(campoEmail.value == elemento.username){
-                    alert('E-mail já tinha sido cadastrado. Redirecionando para a página de login.');
+            let validaDuplicidade = listaUsuarios.some((valor) => {
+                return valor.username === campoEmail.value;
+            });
+
+            if(validaDuplicidade){
+                alert('E-mail já tinha sido cadastrado. Redirecionando para a página de login.');
+                window.location = "./index.html";
+                return;
+            }else{
+                alert('Conta criada com sucesso!');
+                criaUsuario();
+                let confirma = window.confirm('Deseja ir para a página de login?')
+                if(confirma){
                     window.location = "./index.html";
                     return;
                 }else{
-                    alert('Conta criada com sucesso!');
-                    criaUsuario();
+                    window.location.reload();
+                    return;
                 }
             }
         }else{
             alert('Conta criada com sucesso!');
             criaUsuario();
+            let confirma = window.confirm('Deseja ir para a página de login?')
+            if(confirma){
+                window.location = "./index.html";
+            }else{
+                window.location.reload();
+                return;
+            }
         }
     }
 }

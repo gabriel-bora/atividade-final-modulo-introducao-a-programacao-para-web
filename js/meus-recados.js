@@ -69,10 +69,12 @@ if(listaRecados.length > 0) {
         botaoApagar.setAttribute('type', 'button');
         botaoApagar.setAttribute('class', 'apagar');
         botaoApagar.setAttribute('value', 'Apagar');
+        botaoApagar.setAttribute('id', 'apagar' + indice);
 
         botaoEditar.setAttribute('type', 'button');
         botaoEditar.setAttribute('class', 'editar');
         botaoEditar.setAttribute('value', 'Editar');
+        botaoEditar.setAttribute('id', 'editar' + indice);
     }
 }
 
@@ -82,4 +84,23 @@ botaoSair.addEventListener('click', function(){
     window.sessionStorage.removeItem('login');
     window.sessionStorage.removeItem('login');
     window.location = "./index.html";
-})
+});
+
+for (const indice in listaRecados) {
+    let botaoApagar = document.getElementById('apagar' + indice);
+
+    botaoApagar.addEventListener('click', function(){
+        listaRecados.splice([indice], 1);
+        window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+        window.location.reload();
+    })
+
+    let botaoEditar = document.getElementById('editar' + indice);
+
+    botaoEditar.addEventListener('click', function(){
+        descricao.value = listaRecados[indice].descricao;
+        detalhadamento.value = listaRecados[indice].detalhadamento;
+        listaRecados.splice([indice], 1);
+        window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+    })
+}
