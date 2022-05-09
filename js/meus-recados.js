@@ -21,7 +21,9 @@ let detalhadamento = document.getElementById('detalhamento');
 let formulario = document.getElementById('criar-recado');
 let tabela = document.getElementById('recados');
 
-formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit', criarRecado)
+
+function criarRecado(e){
     e.preventDefault();
 
     let infoDescricao = descricao.value;
@@ -36,7 +38,7 @@ formulario.addEventListener('submit', (e) => {
     window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
 
     window.location.reload();
-})
+}
 
 if(listaRecados.length > 0) {
     for (const indice in listaRecados) {
@@ -97,10 +99,19 @@ for (const indice in listaRecados) {
 
     let botaoEditar = document.getElementById('editar' + indice);
 
+    let recadoEditado = listaRecados[indice];
+
     botaoEditar.addEventListener('click', function(){
         descricao.value = listaRecados[indice].descricao;
         detalhadamento.value = listaRecados[indice].detalhadamento;
-        listaRecados.splice([indice], 1);
-        window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+        formulario.removeEventListener('submit', criarRecado)
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+            recadoEditado.descricao = descricao.value;
+            recadoEditado.detalhadamento = detalhadamento.value;
+            listaRecados.splice([indice], 1, recadoEditado);
+            window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+            window.location.reload();
+        })
     })
 }
