@@ -1,4 +1,4 @@
-html{
+html {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -9,7 +9,7 @@ body.inicio {
     margin: 0;
 }
 
-div.imagem{
+div.imagem {
     background-image: url(./images/b8f8b7128481505.6156e2ab5c122.jpg);
     background-position: top;
     background-size: cover;
@@ -17,7 +17,7 @@ div.imagem{
     height: 100vh;
 }
 
-div.formulario{
+div.formulario {
     background-color: #F2F2F2;
     width: 50vw;
     height: 100vh;
@@ -25,27 +25,27 @@ div.formulario{
     line-height: 100vh;
 }
 
-div.conteudo{
+div.conteudo {
     display:inline-block;
     vertical-align: bottom;
     line-height: normal;
     margin-bottom: 50px;
 }
 
-h1.titulo{
+h1.titulo {
     font-weight: 400;
     color: #260101;
     font-size: 20px;
 }
 
-div.user-password{
+div.user-password {
     display: flex;
     margin-top: 50px;
     margin-right: 3vw;
     margin-left: 3vw;
 }
 
-#user{
+#user {
     background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
@@ -58,7 +58,7 @@ div.user-password{
     border-bottom-left-radius: 21px;
 }
 
-#password{
+#password {
     background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
@@ -164,7 +164,7 @@ div.user-password{
     position: relative;
 }
 
-.conta::after{
+.conta::after {
     content: " ";
     width: 100%;
     height: 2px;
@@ -178,7 +178,7 @@ div.user-password{
     transition: transform .25s ease;
 }
 
-.conta:hover::after{
+.conta:hover::after {
     transform: scaleX(1);
 }
 
@@ -269,14 +269,14 @@ div.user-password{
     color: #F2F2F2;
    }
 
-div.forms{
+div.forms {
     display: block;
     text-align: left;
     margin-left: calc(4vw - 3px);
     margin-top: 50px;
 }
 
-.user-pass{
+.user-pass {
     background-color: #F2F2F2;
     height: 40px;
     width: 25vw;
@@ -296,7 +296,7 @@ body.inicio-2 {
     background-color: #F2F2F2;
 }
 
-h1.titulo-2{
+h1.titulo-2 {
     font-weight: 700;
     color: #260101;
     font-size: 25px;
@@ -305,18 +305,18 @@ h1.titulo-2{
     padding-top: 3vh;
 }
 
-div.inicio-2{
+div.inicio-2 {
     display: flex;
     position: relative;
 }
 
-#sair{
+#sair {
     position: absolute;
     right: 0.5vw;
     top: 2vh;
 }
 
-#botaoSair{
+#botaoSair {
     width: 5vw;
     height: 3.5vh;
     border: 0;
@@ -329,7 +329,7 @@ div.inicio-2{
     cursor: pointer;
 }
 
-#botaoSair::after{
+#botaoSair::after {
     content: " ";
     width: 60%;
     height: 2px;
@@ -343,11 +343,11 @@ div.inicio-2{
     transition: transform .25s ease;
 }
 
-#botaoSair:hover::after{
+#botaoSair:hover::after {
     transform: scaleX(1);
 }
 
-#criar-recado{
+#criar-recado {
     display: flex;
     width: 97vw;
     margin-left: 1.5vw;
@@ -355,7 +355,7 @@ div.inicio-2{
     margin-top: 10px;
 }
 
-input#descricao{
+input#descricao {
     background-color: #F2F2F2;
     height: 40px;
     width: 25vw;
@@ -367,12 +367,12 @@ input#descricao{
     border-radius: 21px;
 }
 
-div.descricao{
+div.descricao {
     padding-right: 2.5vw;
     width: 27vw;
 }
 
-input#detalhamento{
+input#detalhamento {
     background-color: #F2F2F2;
     height: 40px;
     width: 57vw;
@@ -385,7 +385,7 @@ input#detalhamento{
     border-bottom-left-radius: 21px;
 }
 
-input#salvar{
+input#salvar {
     background-color: #8C3E3E;
     height: 44px;
     width: 10vw;
@@ -401,7 +401,7 @@ input#salvar{
     cursor: pointer;
 }
 
-table#recados{
+table#recados {
     border-collapse: collapse;
     width: 97vw;
     margin-top: 4vh;
@@ -410,48 +410,42 @@ table#recados{
     color: rgb(31, 31, 31);
 }
 
-th{
+th {
     border-top: 1px solid rgba(165, 165, 145, 1);
     border-bottom: 1px solid rgba(165, 165, 145, 1);
     text-align: left;
     color: #260101;
 }
 
-tr{
+tr {
     height: 30px;
     background-color: #f2f2f2;
 }
 
-tr:nth-child(even){background-color: #ebebeb;}
+tr:nth-child(even) {background-color: #ebebeb;}
 
 tr:hover {background-color: rgb(209, 209, 209);}
 
-.coluna1{
-    width: 2vw;
-}
+.coluna1 {width: 2vw;}
 
-.coluna2{
-    width: 20vw;
-}
+.coluna2 {width: 20vw;}
 
-.coluna3{
-    width: 62vw;
-}
+.coluna3 {width: 62vw;}
 
-.coluna4{
+.coluna4 {
     width: 12vw;
     display: flexbox;
 }
 
-input:focus{
+input:focus {
     border: 1px solid #A66832;
-        -webkit-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
-        -moz-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
-        box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
+    -webkit-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
+    box-shadow: 0px 0px 5px rgba(166, 104, 50, 0.75);
     outline-style: none;
 }
 
-input.apagar{
+input.apagar {
     background-color: #591616;
     height: 26px;
     width: 5vw;
@@ -464,7 +458,7 @@ input.apagar{
     cursor: pointer;
 }
 
-input.editar{
+input.editar {
     background-color: #A66832;
     height: 26px;
     width: 5vw;
