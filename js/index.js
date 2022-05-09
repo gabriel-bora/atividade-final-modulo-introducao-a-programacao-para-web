@@ -19,22 +19,25 @@ form.addEventListener('submit', (event) => {
 
     let validacao = false;
 
-    for (const elemento of listaUsuarios) {
-        if ((username == elemento.username) && (senha == elemento.password)) {
-            validacao = true;
+    if (!listaUsuarios){
+        alert('Você não está cadastrado. Redirecionando para página de cadastro.');
+        window.location = "./cadastro.html";
+        return;
+    }else{
+        for (const elemento of listaUsuarios) {
+            if ((username == elemento.username) && (senha == elemento.password)) {
+                validacao = true;
+            }
+        }
+    
+        if(validacao === true){
+            window.sessionStorage.setItem('login', true);
+            window.sessionStorage.setItem('usuario', username);
+            window.location = "./meus-recados.html";
+            return;
+        }else {
+            alert('E-mail ou senha incorretos.');
+            return;
         }
     }
-
-    if(validacao === true){
-        window.sessionStorage.setItem('login', true);
-        window.sessionStorage.setItem('usuario', username);
-        window.location = "./meus-recados.html";
-        return;
-    }else {
-        alert('E-mail ou senha incorretos.');
-        return;
-    }
 });
-
-
-

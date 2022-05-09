@@ -27,6 +27,7 @@ formulario.addEventListener('submit', (e) => {
     let infoDescricao = descricao.value;
     let infoDetalhadamento = detalhadamento.value;
     let recado = {
+        indice:null,
         descricao:infoDescricao,
         detalhadamento:infoDetalhadamento
     }
@@ -34,14 +35,14 @@ formulario.addEventListener('submit', (e) => {
 
     window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
 
-    descricao.value = "";
-    detalhadamento.value ="";
-
     window.location.reload();
 })
 
 if(listaRecados.length > 0) {
     for (const indice in listaRecados) {
+        listaRecados[indice].indice = indice;
+        window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+
         let linha = document.createElement('tr');
         let coluna1 = document.createElement('td');
         let coluna2 = document.createElement('td');
@@ -66,11 +67,19 @@ if(listaRecados.length > 0) {
         let botaoEditar = colunaTabela4.appendChild(editar);
 
         botaoApagar.setAttribute('type', 'button');
-        botaoApagar.setAttribute('id', 'apagar');
+        botaoApagar.setAttribute('class', 'apagar');
         botaoApagar.setAttribute('value', 'Apagar');
 
         botaoEditar.setAttribute('type', 'button');
-        botaoEditar.setAttribute('id', 'editar');
+        botaoEditar.setAttribute('class', 'editar');
         botaoEditar.setAttribute('value', 'Editar');
     }
 }
+
+let botaoSair = document.getElementById('botaoSair');
+
+botaoSair.addEventListener('click', function(){
+    window.sessionStorage.removeItem('login');
+    window.sessionStorage.removeItem('login');
+    window.location = "./index.html";
+})
