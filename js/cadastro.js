@@ -143,17 +143,4 @@ function criaUsuario(){
     listaUsuarios.push(usuario);
 
     window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
-
-    labelEmail.setAttribute("style", "color: black");
-    labelEmail.innerHTML = "E-mail:";
-    validEmail = false;
-    campoEmail.value = ""
-    labelSenha.setAttribute("style", "color: black");
-    labelSenha.innerHTML = "Senha:";
-    validSenha = false;
-    campoSenha.value = ""
-    labelConfirmaSenha.setAttribute("style", "color: black");
-    labelConfirmaSenha.innerHTML = "Repetir Senha:";
-    validConfirmaSenha = false;
-    campoConfirmaSenha.value = ""
 }
