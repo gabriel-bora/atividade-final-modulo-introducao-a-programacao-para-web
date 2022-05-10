@@ -84,7 +84,7 @@ let botaoSair = document.getElementById('botaoSair');
 
 botaoSair.addEventListener('click', function(){
     window.sessionStorage.removeItem('login');
-    window.sessionStorage.removeItem('login');
+    window.sessionStorage.removeItem('usuario');
     window.location = "./index.html";
 });
 
@@ -92,9 +92,15 @@ for (const indice in listaRecados) {
     let botaoApagar = document.getElementById('apagar' + indice);
 
     botaoApagar.addEventListener('click', function(){
-        listaRecados.splice([indice], 1);
-        window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
-        window.location.reload();
+        let confirmaApagar = window.confirm('Quer apagar o recado?');
+        if(confirmaApagar){
+            listaRecados.splice([indice], 1);
+            window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+            window.location.reload();
+            return;
+        }else{
+            return;
+        }
     })
 
     let botaoEditar = document.getElementById('editar' + indice);
