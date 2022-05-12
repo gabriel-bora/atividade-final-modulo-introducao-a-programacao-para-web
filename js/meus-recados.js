@@ -14,6 +14,11 @@ for (const indice in listaUsuarios) {
     }
 }
 
+let nomeUsuario = listaUsuarios[indiceUsuario].nome;
+let tituloPagina = document.querySelector('#titulo-2');
+
+tituloPagina.innerHTML = 'Recados de ' + nomeUsuario;
+
 let listaRecados = listaUsuarios[indiceUsuario].recados;
 
 let descricao = document.getElementById('descricao');
@@ -33,7 +38,7 @@ function criarRecado(e){
         descricao:infoDescricao,
         detalhadamento:infoDetalhadamento
     }
-    listaRecados.push(recado);
+    listaRecados.unshift(recado);
 
     window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
 
@@ -60,6 +65,8 @@ if(listaRecados.length > 0) {
         colunaTabela1.innerText = (Number(indice) + 1);
         colunaTabela2.innerText = listaRecados[indice].descricao;
         colunaTabela3.innerText = listaRecados[indice].detalhadamento;
+        colunaTabela2.setAttribute('style', 'width: 20vw; word-break: break-word');
+        colunaTabela3.setAttribute('style', 'width: 62vw; word-break: break-word');
 
         let apagar = document.createElement('input');
         let editar = document.createElement('input');

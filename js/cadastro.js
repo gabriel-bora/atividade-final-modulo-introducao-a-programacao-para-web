@@ -10,10 +10,15 @@ let campoConfirmaSenha = document.querySelector("#userRepeteSenha");
 let labelConfirmaSenha = document.querySelector("#label-userRepeteSenha");
 let validConfirmaSenha = false;
 
+let campoNome = document.querySelector('#userName');
+let labelNome = document.querySelector('#label-userName');
+let validNome = false;
+
 let formulario = document.querySelector("#formCadastro");
 
 campoEmail.addEventListener('keyup', verificaEmail);
 campoSenha.addEventListener('keyup', verificaSenha);
+campoNome.addEventListener('keyup', verificaNome)
 campoConfirmaSenha.addEventListener('keyup', verificaConfirmaSenha);
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -82,11 +87,30 @@ function verificaConfirmaSenha(){
     }
 }
 
+function verificaNome(){
+    if(campoNome.value === ""){
+        labelNome.setAttribute("style", "color: black");
+        labelNome.innerHTML = "Nome:";
+        validNome = false;
+    }else{
+        if(campoNome.value.length < 3){
+            labelNome.setAttribute("style", "color: red");
+            labelNome.innerHTML = "Nome: *Mínimo de 3 caracteres";
+            validNome = false;
+        }else{
+            labelNome.setAttribute("style", "color: green");
+            labelNome.innerHTML = "Nome: *Nome apto";
+            validNome = true;
+        }
+    }
+}
+
 function verificaCampos(){
-    if(campoEmail.value === '' || campoSenha.value === ''  || campoConfirmaSenha.value === ''){
+    if(campoEmail.value === '' || campoSenha.value === ''  || 
+       campoConfirmaSenha.value === '' || campoNome.value === ''){
         alert('Algo deu errado! Por favor verifique se você preencheu todos os campos.');
         return;
-    }else if(!validEmail || !validSenha || !validConfirmaSenha){
+    }else if(!validEmail || !validSenha || !validConfirmaSenha || !validNome){
         alert('Campos incorretos! Por favor verifique se você preencheu todos os campos corretamente.');
         return;
     }else {
@@ -137,6 +161,7 @@ function criaUsuario(){
     let usuario = {
         username:campoEmail.value,
         password:campoSenha.value,
+        nome:campoNome.value,
         recados:[]
     };
 
