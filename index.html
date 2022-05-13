@@ -19,16 +19,14 @@
         <h1 class="titulo">ENTRAR NO SISTEMA DE RECADOS</h1>
         <form action="./meus-recados.html" method="get" id="entrar">
           <div class="user-password">
-            <input
-              id="user"
-              type="email"
-              name="User Name"
-              placeholder="E-mail"/>
-            <input
-              id="password"
-              type="password"
-              name="Password"
-              placeholder="Senha"/>
+            <div id="divUser">
+              <input id="user" type="email" name="User Name" placeholder="E-mail"/>
+              <label for="user" id="labelUser">E-mail:</label>
+            </div>
+            <div id="divPassword">
+              <input id="password" type="password" name="Password" placeholder="Senha"/>
+              <label for="password" id="labelPassword">Senha:</label>
+            </div>
           </div>
           <button type="submit" class="entrar">
             <span class="circle" aria-hidden="true">

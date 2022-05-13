@@ -1,7 +1,7 @@
 let login = window.sessionStorage.getItem('login');
 
 if(!login){
-    window.location = "./index.html";
+    window.location = './index.html';
 }
 
 let usuario = window.sessionStorage.getItem('usuario');
@@ -21,12 +21,12 @@ tituloPagina.innerHTML = 'Recados de ' + nomeUsuario;
 
 let listaRecados = listaUsuarios[indiceUsuario].recados;
 
-let descricao = document.getElementById('descricao');
-let detalhadamento = document.getElementById('detalhamento');
-let formulario = document.getElementById('criar-recado');
-let tabela = document.getElementById('recados');
+let descricao = document.querySelector('#descricao');
+let detalhadamento = document.querySelector('#detalhamento');
+let formulario = document.querySelector('#criar-recado');
+let tabela = document.querySelector('#recados');
 
-formulario.addEventListener('submit', criarRecado)
+formulario.addEventListener('submit', criarRecado);
 
 function criarRecado(e){
     e.preventDefault();
@@ -37,7 +37,8 @@ function criarRecado(e){
         indice:null,
         descricao:infoDescricao,
         detalhadamento:infoDetalhadamento
-    }
+    };
+
     listaRecados.unshift(recado);
 
     window.localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
@@ -87,16 +88,16 @@ if(listaRecados.length > 0) {
     }
 }
 
-let botaoSair = document.getElementById('botaoSair');
+let botaoSair = document.querySelector('#botaoSair');
 
 botaoSair.addEventListener('click', function(){
     window.sessionStorage.removeItem('login');
     window.sessionStorage.removeItem('usuario');
-    window.location = "./index.html";
+    window.location = './index.html';
 });
 
 for (const indice in listaRecados) {
-    let botaoApagar = document.getElementById('apagar' + indice);
+    let botaoApagar = document.querySelector('#apagar' + indice);
 
     botaoApagar.addEventListener('click', function(){
         let confirmaApagar = window.confirm('Quer apagar o recado?');
@@ -110,7 +111,7 @@ for (const indice in listaRecados) {
         }
     })
 
-    let botaoEditar = document.getElementById('editar' + indice);
+    let botaoEditar = document.querySelector('#editar' + indice);
 
     let recadoEditado = listaRecados[indice];
 

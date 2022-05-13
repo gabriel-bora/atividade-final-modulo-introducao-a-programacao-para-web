@@ -1,5 +1,6 @@
 html {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 body.inicio {
@@ -45,17 +46,44 @@ div.user-password {
     margin-left: 3vw;
 }
 
+#divUser {
+    position: relative;
+}
+
 #user {
     background-color: #F2F2F2;
     height: 40px;
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
     color: rgb(0, 0, 0);
-    padding-left: 10px;
+    padding-left: 11px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 21px;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+#labelUser {
+    position: absolute;
+    left: 11px;
+    bottom: 30px;
+    font-size: 13px;
+    color: rgba(165, 165, 145, 0);
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+#user:focus ~ label, user:valid ~ label {
+    transform: translate(20%, -50%) scale(1);
+    background-color: #F2F2F2;
+    padding: 0 .2em;
+    color: #260101;
+}
+
+#divPassword {
+    position: relative;
 }
 
 #password {
@@ -64,11 +92,30 @@ div.user-password {
     width: 20vw;
     border: 1px solid rgba(165, 165, 145, 1);
     color: rgb(0, 0, 0);
-    padding-left: 10px;
+    padding-left: 11px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     border-top-right-radius: 21px;
     border-bottom-right-radius: 21px;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+#labelPassword {
+    position: absolute;
+    left: 11px;
+    bottom: 30px;
+    font-size: 13px;
+    color: rgba(165, 165, 145, 0);
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+#password:focus ~ label, password:valid ~ label {
+    transform: translate(20%, -50%) scale(1);
+    background-color: #F2F2F2;
+    padding: 0 .2em;
+    color: #260101;
 }
 
 .entrar {
@@ -294,6 +341,7 @@ body.inicio-2 {
     width: 100vw;
     margin: 0;
     background-color: #F2F2F2;
+    overflow-x: hidden;
 }
 
 #titulo-2 {

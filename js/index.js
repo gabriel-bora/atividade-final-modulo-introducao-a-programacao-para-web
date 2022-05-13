@@ -1,13 +1,13 @@
 let login = window.sessionStorage.getItem('login');
 
 if(login){
-    window.location = "./meus-recados.html";
+    window.location = './meus-recados.html';
 }
 
-const form = document.getElementById('entrar');
+let form = document.querySelector('#entrar');
 
-const user = document.getElementById('user');
-const password = document.getElementById('password');
+let user = document.querySelector('#user');
+let password = document.querySelector('#password');
 
 let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
@@ -19,17 +19,17 @@ form.addEventListener('submit', (event) => {
 
     if (!listaUsuarios){
         alert('Você não está cadastrado. Redirecionando para página de cadastro.');
-        window.location = "./cadastro.html";
+        window.location = './cadastro.html';
         return;
     }else{
         let validacao = listaUsuarios.some((valor) => {
-            return valor.username === username && valor.password === senha
+            return valor.username === username && valor.password === senha;
         });
     
         if(validacao){
             window.sessionStorage.setItem('login', true);
             window.sessionStorage.setItem('usuario', username);
-            window.location = "./meus-recados.html";
+            window.location = './meus-recados.html';
             return;
         }else {
             alert('E-mail ou senha incorretos.');
