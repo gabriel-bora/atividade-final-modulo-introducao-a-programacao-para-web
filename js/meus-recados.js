@@ -118,9 +118,11 @@ for (const indice in listaRecados) {
     botaoEditar.addEventListener('click', function(){
         descricao.value = listaRecados[indice].descricao;
         detalhadamento.value = listaRecados[indice].detalhadamento;
-        formulario.removeEventListener('submit', criarRecado)
-        formulario.addEventListener('submit', (e) => {
-            e.preventDefault();
+        let botaoSalvar = document.querySelector('#salvar');
+        botaoSalvar.setAttribute('style', 'display: none');
+        let botaoAtualizar = document.querySelector('#atualizar');
+        botaoAtualizar.setAttribute('style', 'display: inline-block');
+        botaoAtualizar.addEventListener('click', function() {
             recadoEditado.descricao = descricao.value;
             recadoEditado.detalhadamento = detalhadamento.value;
             listaRecados.splice([indice], 1, recadoEditado);

@@ -433,7 +433,7 @@ input#detalhamento {
     border-bottom-left-radius: 21px;
 }
 
-input#salvar {
+input.salvar {
     background-color: #8C3E3E;
     height: 44px;
     width: 10vw;
@@ -447,6 +447,11 @@ input#salvar {
     border-top-right-radius: 21px;
     border-bottom-right-radius: 21px;
     cursor: pointer;
+}
+
+#atualizar {
+    display: none;
+    padding-left: 3px;
 }
 
 table#recados {
