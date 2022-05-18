@@ -18,12 +18,9 @@ let formulario = document.querySelector('#formCadastro');
 
 campoEmail.addEventListener('keyup', verificaEmail);
 campoSenha.addEventListener('keyup', verificaSenha);
-campoNome.addEventListener('keyup', verificaNome)
+campoNome.addEventListener('keyup', verificaNome);
 campoConfirmaSenha.addEventListener('keyup', verificaConfirmaSenha);
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-    verificaCampos();
-});
+formulario.addEventListener('submit', verificaCampos);
 
 let regSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
@@ -43,7 +40,7 @@ function verificaEmail(){
             validEmail = true;
         }
     }
-}
+};
 
 function verificaSenha(){
     let senhaValida = campoSenha.value.match(regSenha);
@@ -67,7 +64,7 @@ function verificaSenha(){
             validSenha = true;
         }
     }
-}
+};
 
 function verificaConfirmaSenha(){
     if(campoConfirmaSenha.value === ''){
@@ -85,7 +82,7 @@ function verificaConfirmaSenha(){
             validConfirmaSenha = true;
         }
     }
-}
+};
 
 function verificaNome(){
     if(campoNome.value === ''){
@@ -103,9 +100,11 @@ function verificaNome(){
             validNome = true;
         }
     }
-}
+};
 
-function verificaCampos(){
+function verificaCampos(e){
+    e.preventDefault();
+
     if(campoEmail.value === '' || campoSenha.value === ''  || 
        campoConfirmaSenha.value === '' || campoNome.value === ''){
         alert('Algo deu errado! Por favor verifique se você preencheu todos os campos.');
@@ -149,7 +148,7 @@ function verificaCampos(){
             }
         }
     }
-}
+};
 
 function criaUsuario(){
     let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));

@@ -1,18 +1,19 @@
 let login = window.sessionStorage.getItem('login');
 
 if(login){
-    window.location = './meus-recados.html';
+    alert('Você já está logado!');
+    window.location = './home.html';
 }
 
 let form = document.querySelector('#entrar');
-
 let user = document.querySelector('#user');
 let password = document.querySelector('#password');
-
 let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+form.addEventListener('submit', entrar);
+
+function entrar(e){
+    e.preventDefault();
     
     let username = user.value;
     let senha = password.value;
@@ -29,11 +30,14 @@ form.addEventListener('submit', (event) => {
         if(validacao){
             window.sessionStorage.setItem('login', true);
             window.sessionStorage.setItem('usuario', username);
-            window.location = './meus-recados.html';
+            window.location = './home.html';
             return;
         }else {
             alert('E-mail ou senha incorretos.');
+            user.value = '';
+            password.value = '';
+            user.focus();
             return;
         }
     }
-});
+}

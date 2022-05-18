@@ -449,11 +449,6 @@ input.salvar {
     cursor: pointer;
 }
 
-#atualizar {
-    display: none;
-    padding-left: 3px;
-}
-
 table#recados {
     border-collapse: collapse;
     width: 97vw;
