@@ -6,8 +6,8 @@ if(login){
 }
 
 let form = document.querySelector('#entrar');
-let user = document.querySelector('#user');
-let password = document.querySelector('#password');
+let campoUser = document.querySelector('#user');
+let campoSenha = document.querySelector('#password');
 let listaUsuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
 form.addEventListener('submit', entrar);
@@ -15,8 +15,8 @@ form.addEventListener('submit', entrar);
 function entrar(e){
     e.preventDefault();
     
-    let username = user.value;
-    let senha = password.value;
+    let username = campoUser.value;
+    let senha = campoSenha.value;
 
     if (!listaUsuarios){
         alert('Você não está cadastrado. Redirecionando para página de cadastro.');
@@ -34,9 +34,9 @@ function entrar(e){
             return;
         }else {
             alert('E-mail ou senha incorretos.');
-            user.value = '';
-            password.value = '';
-            user.focus();
+            campoUser.value = '';
+            campoSenha.value = '';
+            campoUser.focus();
             return;
         }
     }
